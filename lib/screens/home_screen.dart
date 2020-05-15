@@ -35,6 +35,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget titleWidget() {
+    return Column(
+      children: <Widget>[Text("Your Location"), Text("NewYork, USA")],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +49,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: <Widget>[
               appBarWidget(),
+              titleWidget(),
             ],
           ),
         ),
