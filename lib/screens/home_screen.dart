@@ -8,7 +8,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
   Widget appBarWidget() {
     return Container(
       margin: EdgeInsets.only(top: 20),
@@ -65,6 +64,32 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget tabBarWidget() {
+    return DefaultTabController(
+      length: 5,
+      child: TabBar(
+        isScrollable: true,
+        tabs: <Widget>[
+          Tab(
+            child: Text("Hamster"),
+          ),
+          Tab(
+            child: Text("Parrot"),
+          ),
+          Tab(
+            child: Text("Dog"),
+          ),
+          Tab(
+            child: Text("Cat"),
+          ),
+          Tab(
+            child: Text("Guinea Pig"),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,6 +99,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               appBarWidget(),
               titleWidget(),
+              tabBarWidget(),
             ],
           ),
         ),
