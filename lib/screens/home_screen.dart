@@ -8,6 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   Widget appBarWidget() {
     return Container(
       margin: EdgeInsets.only(top: 20),
@@ -40,10 +41,25 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.only(top: 32, left: 24),
       alignment: Alignment.centerLeft,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("Your Location"),
+          Text(
+            "Your Location",
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.grey,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
           SizedBox(height: 16),
-          Text("NewYork, USA"),
+          Text(
+            "NewYork, USA",
+            style: TextStyle(
+              fontSize: 24,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );
