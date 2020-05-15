@@ -36,8 +36,16 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget titleWidget() {
-    return Column(
-      children: <Widget>[Text("Your Location"), Text("NewYork, USA")],
+    return Container(
+      margin: EdgeInsets.only(top: 32, left: 24),
+      alignment: Alignment.centerLeft,
+      child: Column(
+        children: <Widget>[
+          Text("Your Location"),
+          SizedBox(height: 16),
+          Text("NewYork, USA"),
+        ],
+      ),
     );
   }
 
