@@ -8,6 +8,33 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Widget appBarWidget() {
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.only(left: 15),
+              child: Icon(Icons.menu),
+            ),
+          ),
+          Expanded(
+            flex: 6,
+            child: Container(),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(right: 15),
+              child: Icon(Icons.person),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,30 +42,7 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Container(
-                margin: EdgeInsets.only(top: 20),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Icon(Icons.menu),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 6,
-                      child: Container(),
-                    ),
-                    Expanded(
-                      child: Container(
-                        padding: EdgeInsets.only(right: 15),
-                        child: Icon(Icons.person),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              appBarWidget(),
             ],
           ),
         ),
