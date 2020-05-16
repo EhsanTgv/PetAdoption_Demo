@@ -84,7 +84,11 @@ class _HomePageState extends State<HomePage> {
     return Tab(
       child: Text(
         name,
-        style: TextStyle(color: Colors.grey),
+        style: TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 12,
+          color: Colors.grey,
+        ),
       ),
     );
   }
