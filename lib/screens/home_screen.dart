@@ -75,6 +75,11 @@ class _HomePageState extends State<HomePage> {
           fontSize: 12,
           color: Colors.black,
         ),
+        labelColor: Colors.black,
+        labelStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 14,
+        ),
         indicatorColor: Colors.black,
         tabs: <Widget>[
           tabItemWidget("Hamster"),
