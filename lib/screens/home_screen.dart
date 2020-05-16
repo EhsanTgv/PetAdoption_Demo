@@ -70,22 +70,21 @@ class _HomePageState extends State<HomePage> {
       child: TabBar(
         isScrollable: true,
         tabs: <Widget>[
-          Tab(
-            child: Text("Hamster"),
-          ),
-          Tab(
-            child: Text("Parrot"),
-          ),
-          Tab(
-            child: Text("Dog"),
-          ),
-          Tab(
-            child: Text("Cat"),
-          ),
-          Tab(
-            child: Text("Guinea Pig"),
-          ),
+          tabItemWidget("Hamster"),
+          tabItemWidget("Parrot"),
+          tabItemWidget("Dog"),
+          tabItemWidget("Cat"),
+          tabItemWidget("Guinea Pig"),
         ],
+      ),
+    );
+  }
+
+  Widget tabItemWidget(String name) {
+    return Tab(
+      child: Text(
+        name,
+        style: TextStyle(color: Colors.grey),
       ),
     );
   }
