@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petadoption/custom_view/custom_tab_indicator.dart';
 
 class HomePage extends StatefulWidget {
   HomePage();
@@ -80,7 +81,8 @@ class _HomePageState extends State<HomePage> {
           fontWeight: FontWeight.bold,
           fontSize: 14,
         ),
-        indicatorColor: Colors.black,
+        // indicatorColor: Colors.black,
+        indicator: CircleTabIndicator(color: Colors.black, radius: 3),
         tabs: <Widget>[
           tabItemWidget("Hamster"),
           tabItemWidget("Parrot"),
