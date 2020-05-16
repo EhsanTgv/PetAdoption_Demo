@@ -69,6 +69,13 @@ class _HomePageState extends State<HomePage> {
       length: 5,
       child: TabBar(
         isScrollable: true,
+        unselectedLabelColor: Colors.grey,
+        unselectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 12,
+          color: Colors.black,
+        ),
+        indicatorColor: Colors.black,
         tabs: <Widget>[
           tabItemWidget("Hamster"),
           tabItemWidget("Parrot"),
@@ -84,11 +91,6 @@ class _HomePageState extends State<HomePage> {
     return Tab(
       child: Text(
         name,
-        style: TextStyle(
-          fontWeight: FontWeight.normal,
-          fontSize: 12,
-          color: Colors.grey,
-        ),
       ),
     );
   }
