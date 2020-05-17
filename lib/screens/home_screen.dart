@@ -9,6 +9,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var tabsList = <Widget>[
+    tabItemWidget("Hamster"),
+    tabItemWidget("Parrot"),
+    tabItemWidget("Dog"),
+    tabItemWidget("Cat"),
+    tabItemWidget("Guinea Pig"),
+  ];
+
   Widget appBarWidget() {
     return Container(
       margin: EdgeInsets.only(top: 20),
@@ -67,7 +75,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget tabBarWidget() {
     return DefaultTabController(
-      length: 5,
+      length: tabsList.length,
       child: TabBar(
         isScrollable: true,
         unselectedLabelColor: Colors.grey,
@@ -83,18 +91,12 @@ class _HomePageState extends State<HomePage> {
         ),
         // indicatorColor: Colors.black,
         indicator: CircleTabIndicator(color: Colors.black, radius: 3),
-        tabs: <Widget>[
-          tabItemWidget("Hamster"),
-          tabItemWidget("Parrot"),
-          tabItemWidget("Dog"),
-          tabItemWidget("Cat"),
-          tabItemWidget("Guinea Pig"),
-        ],
+        tabs: tabsList,
       ),
     );
   }
 
-  Widget tabItemWidget(String name) {
+  static Widget tabItemWidget(String name) {
     return Tab(
       child: Text(
         name,
