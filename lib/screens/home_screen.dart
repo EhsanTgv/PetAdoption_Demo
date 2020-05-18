@@ -107,18 +107,26 @@ class _HomePageState extends State<HomePage> {
   Widget petListWidget() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 200.0,
+      height: 300.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Container(
-            child: ClipRRect(
-              child: Image.asset("assets/dog_1.png"),
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(32.0),
-                topLeft: Radius.circular(32.0),
-                bottomRight: Radius.circular(32.0),
-              ),
+            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Column(
+              children: <Widget>[
+                ClipRRect(
+                  child: Image.asset("assets/dog_1.png"),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(32.0),
+                    topLeft: Radius.circular(32.0),
+                    bottomRight: Radius.circular(32.0),
+                  ),
+                ),
+                SizedBox(height: 12),
+                Text("Charlie"),
+                Text("Pug Dog"),
+              ],
             ),
           ),
           Container(
