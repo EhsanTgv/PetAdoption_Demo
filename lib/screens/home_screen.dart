@@ -104,6 +104,38 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget petListWidget() {
+    return Container(
+          margin: EdgeInsets.symmetric(vertical: 20.0),
+          height: 200.0,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+                width: 160.0,
+                color: Colors.red,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.blue,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.green,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.yellow,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.orange,
+              ),
+            ],
+          ),
+        );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,35 +146,7 @@ class _HomePageState extends State<HomePage> {
               appBarWidget(),
               titleWidget(),
               tabBarWidget(),
-              Container(
-      margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 200.0,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          Container(
-            width: 160.0,
-            color: Colors.red,
-          ),
-          Container(
-            width: 160.0,
-            color: Colors.blue,
-          ),
-          Container(
-            width: 160.0,
-            color: Colors.green,
-          ),
-          Container(
-            width: 160.0,
-            color: Colors.yellow,
-          ),
-          Container(
-            width: 160.0,
-            color: Colors.orange,
-          ),
-        ],
-      ),
-    ),
+              petListWidget(),
             ],
           ),
         ),
