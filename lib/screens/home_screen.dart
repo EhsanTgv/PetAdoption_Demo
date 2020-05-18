@@ -112,9 +112,14 @@ class _HomePageState extends State<HomePage> {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Container(
-            width: 160.0,
-            color: Colors.red,
-            child: Image.asset("assets/dog_1.png"),
+            child: ClipRRect(
+              child: Image.asset("assets/dog_1.png"),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(32.0),
+                topLeft: Radius.circular(32.0),
+                bottomRight: Radius.circular(32.0),
+              ),
+            ),
           ),
           Container(
             width: 160.0,
