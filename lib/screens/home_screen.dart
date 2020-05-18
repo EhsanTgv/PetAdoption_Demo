@@ -114,6 +114,7 @@ class _HomePageState extends State<HomePage> {
           Container(
             margin: EdgeInsets.only(left: 16.0, right: 16.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 ClipRRect(
                   child: Image.asset("assets/dog_1.png"),
@@ -124,8 +125,23 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(height: 12),
-                Text("Charlie"),
-                Text("Pug Dog"),
+                Text(
+                  "Charlie",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 6),
+                Text(
+                  "Pug Dog",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
               ],
             ),
           ),
