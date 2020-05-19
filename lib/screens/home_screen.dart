@@ -177,6 +177,18 @@ class _HomePageState extends State<HomePage> {
               titleWidget(),
               tabBarWidget(),
               petListWidget(),
+              Container(
+                margin: EdgeInsets.only(left: 24),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Your Favorite Pets",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
             ],
           ),
         ),
