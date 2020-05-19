@@ -17,6 +17,111 @@ class _HomePageState extends State<HomePage> {
     tabItemWidget("Guinea Pig"),
   ];
 
+  var petList = <Widget>[
+    Container(
+      margin: EdgeInsets.only(left: 16.0, right: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ClipRRect(
+            child: Image.asset("assets/dog_1.png"),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(32.0),
+              topLeft: Radius.circular(32.0),
+              bottomRight: Radius.circular(32.0),
+            ),
+          ),
+          SizedBox(height: 12),
+          Text(
+            "Charlie",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 6),
+          Text(
+            "Pug Dog",
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        ],
+      ),
+    ),
+    Container(
+      margin: EdgeInsets.only(left: 16.0, right: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ClipRRect(
+            child: Image.asset("assets/dog_2.png"),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(32.0),
+              topLeft: Radius.circular(32.0),
+              bottomRight: Radius.circular(32.0),
+            ),
+          ),
+          SizedBox(height: 12),
+          Text(
+            "Jordan",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 6),
+          Text(
+            "Bull Terrier",
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        ],
+      ),
+    ),
+    Container(
+      margin: EdgeInsets.only(left: 16.0, right: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ClipRRect(
+            child: Image.asset("assets/dog_3.png"),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(32.0),
+              topLeft: Radius.circular(32.0),
+              bottomRight: Radius.circular(32.0),
+            ),
+          ),
+          SizedBox(height: 12),
+          Text(
+            "Dannie",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 6),
+          Text(
+            "Bocker",
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        ],
+      ),
+    ),
+  ];
+
   Widget appBarWidget() {
     return Container(
       margin: EdgeInsets.only(top: 20),
@@ -110,110 +215,7 @@ class _HomePageState extends State<HomePage> {
       height: 300,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(left: 16.0, right: 16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                ClipRRect(
-                  child: Image.asset("assets/dog_1.png"),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(32.0),
-                    topLeft: Radius.circular(32.0),
-                    bottomRight: Radius.circular(32.0),
-                  ),
-                ),
-                SizedBox(height: 12),
-                Text(
-                  "Charlie",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 6),
-                Text(
-                  "Pug Dog",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 12,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 16.0, right: 16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                ClipRRect(
-                  child: Image.asset("assets/dog_2.png"),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(32.0),
-                    topLeft: Radius.circular(32.0),
-                    bottomRight: Radius.circular(32.0),
-                  ),
-                ),
-                SizedBox(height: 12),
-                Text(
-                  "Jordan",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 6),
-                Text(
-                  "Bull Terrier",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 12,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 16.0, right: 16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                ClipRRect(
-                  child: Image.asset("assets/dog_3.png"),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(32.0),
-                    topLeft: Radius.circular(32.0),
-                    bottomRight: Radius.circular(32.0),
-                  ),
-                ),
-                SizedBox(height: 12),
-                Text(
-                  "Dannie",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 6),
-                Text(
-                  "Bocker",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 12,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+        children: petList,
       ),
     );
   }
