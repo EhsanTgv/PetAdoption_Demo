@@ -9,6 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  static var tabsArray = ["Hamster", "Parrot", "Dog", "Cat", "Guinea Pig"];
+
   static var petMap = <Map<String, String>>[
     {"Image": "assets/dog_1.png", "Name": "Charlie", "Race": "Pug Dog"},
     {"Image": "assets/dog_2.png", "Name": "Jordan", "Race": "Bull Terrier"},
@@ -16,11 +18,11 @@ class _HomePageState extends State<HomePage> {
   ];
 
   var tabsList = <Widget>[
-    tabItemWidget("Hamster"),
-    tabItemWidget("Parrot"),
-    tabItemWidget("Dog"),
-    tabItemWidget("Cat"),
-    tabItemWidget("Guinea Pig"),
+    tabItemWidget(tabsArray[0]),
+    tabItemWidget(tabsArray[1]),
+    tabItemWidget(tabsArray[2]),
+    tabItemWidget(tabsArray[3]),
+    tabItemWidget(tabsArray[4]),
   ];
 
   var petList = <Widget>[
