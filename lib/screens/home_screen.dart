@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
   Widget petListWidget() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0),
-      height: 300.0,
+      height: 300,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
@@ -146,20 +146,72 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            width: 160.0,
-            color: Colors.blue,
+            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                ClipRRect(
+                  child: Image.asset("assets/dog_2.png"),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(32.0),
+                    topLeft: Radius.circular(32.0),
+                    bottomRight: Radius.circular(32.0),
+                  ),
+                ),
+                SizedBox(height: 12),
+                Text(
+                  "Jordan",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 6),
+                Text(
+                  "Bull Terrier",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
           ),
           Container(
-            width: 160.0,
-            color: Colors.green,
-          ),
-          Container(
-            width: 160.0,
-            color: Colors.yellow,
-          ),
-          Container(
-            width: 160.0,
-            color: Colors.orange,
+            margin: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                ClipRRect(
+                  child: Image.asset("assets/dog_3.png"),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(32.0),
+                    topLeft: Radius.circular(32.0),
+                    bottomRight: Radius.circular(32.0),
+                  ),
+                ),
+                SizedBox(height: 12),
+                Text(
+                  "Dannie",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 6),
+                Text(
+                  "Bocker",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
