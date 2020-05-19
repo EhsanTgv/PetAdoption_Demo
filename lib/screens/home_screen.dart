@@ -9,6 +9,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  static Map<String, String> petMap = [
+    {"Image": "assets/dog_1.png", "Name": "Charlie", "Race": "Pug Dog"},
+    {"Image": "assets/dog_2.png", "Name": "Jordan", "Race": "Bull Terrier"},
+    {"Image": "assets/dog_3.png", "Name": "Dannie", "Race": "Bocker"},
+  ] as Map<String, String>;
+
   var tabsList = <Widget>[
     tabItemWidget("Hamster"),
     tabItemWidget("Parrot"),
@@ -24,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           ClipRRect(
-            child: Image.asset("assets/dog_1.png"),
+            child: Image.asset(petMap["Image"][0]),
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(32.0),
               topLeft: Radius.circular(32.0),
@@ -33,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 12),
           Text(
-            "Charlie",
+            petMap["Name"][0],
             style: TextStyle(
               color: Colors.black,
               fontSize: 14,
@@ -42,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 6),
           Text(
-            "Pug Dog",
+            petMap["Race"][0],
             style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
@@ -58,7 +64,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           ClipRRect(
-            child: Image.asset("assets/dog_2.png"),
+            child: Image.asset(petMap["Image"][1]),
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(32.0),
               topLeft: Radius.circular(32.0),
@@ -67,7 +73,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 12),
           Text(
-            "Jordan",
+            petMap["Name"][1],
             style: TextStyle(
               color: Colors.black,
               fontSize: 14,
@@ -76,7 +82,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 6),
           Text(
-            "Bull Terrier",
+            petMap["Race"][1],
             style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
@@ -92,7 +98,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           ClipRRect(
-            child: Image.asset("assets/dog_3.png"),
+            child: Image.asset(petMap["Image"][2]),
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(32.0),
               topLeft: Radius.circular(32.0),
@@ -101,7 +107,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 12),
           Text(
-            "Dannie",
+            petMap["Name"][2],
             style: TextStyle(
               color: Colors.black,
               fontSize: 14,
@@ -110,7 +116,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 6),
           Text(
-            "Bocker",
+            petMap["Race"][2],
             style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
