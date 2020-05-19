@@ -9,11 +9,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static Map<String, String> petMap = [
+  static var petMap = <Map<String, String>>[
     {"Image": "assets/dog_1.png", "Name": "Charlie", "Race": "Pug Dog"},
     {"Image": "assets/dog_2.png", "Name": "Jordan", "Race": "Bull Terrier"},
     {"Image": "assets/dog_3.png", "Name": "Dannie", "Race": "Bocker"},
-  ] as Map<String, String>;
+  ];
 
   var tabsList = <Widget>[
     tabItemWidget("Hamster"),
@@ -24,108 +24,9 @@ class _HomePageState extends State<HomePage> {
   ];
 
   var petList = <Widget>[
-    Container(
-      margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ClipRRect(
-            child: Image.asset(petMap["Image"][0]),
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(32.0),
-              topLeft: Radius.circular(32.0),
-              bottomRight: Radius.circular(32.0),
-            ),
-          ),
-          SizedBox(height: 12),
-          Text(
-            petMap["Name"][0],
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(height: 6),
-          Text(
-            petMap["Race"][0],
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 12,
-              fontWeight: FontWeight.normal,
-            ),
-          ),
-        ],
-      ),
-    ),
-    Container(
-      margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ClipRRect(
-            child: Image.asset(petMap["Image"][1]),
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(32.0),
-              topLeft: Radius.circular(32.0),
-              bottomRight: Radius.circular(32.0),
-            ),
-          ),
-          SizedBox(height: 12),
-          Text(
-            petMap["Name"][1],
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(height: 6),
-          Text(
-            petMap["Race"][1],
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 12,
-              fontWeight: FontWeight.normal,
-            ),
-          ),
-        ],
-      ),
-    ),
-    Container(
-      margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ClipRRect(
-            child: Image.asset(petMap["Image"][2]),
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(32.0),
-              topLeft: Radius.circular(32.0),
-              bottomRight: Radius.circular(32.0),
-            ),
-          ),
-          SizedBox(height: 12),
-          Text(
-            petMap["Name"][2],
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(height: 6),
-          Text(
-            petMap["Race"][2],
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 12,
-              fontWeight: FontWeight.normal,
-            ),
-          ),
-        ],
-      ),
-    ),
+    petListItemWidget(petMap[0]),
+    petListItemWidget(petMap[1]),
+    petListItemWidget(petMap[2]),
   ];
 
   Widget appBarWidget() {
@@ -211,6 +112,43 @@ class _HomePageState extends State<HomePage> {
     return Tab(
       child: Text(
         name,
+      ),
+    );
+  }
+
+  static Widget petListItemWidget(Map<String, String> pet) {
+    return Container(
+      margin: EdgeInsets.only(left: 16.0, right: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ClipRRect(
+            child: Image.asset(pet["Image"]),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(32.0),
+              topLeft: Radius.circular(32.0),
+              bottomRight: Radius.circular(32.0),
+            ),
+          ),
+          SizedBox(height: 12),
+          Text(
+            pet["Name"],
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 6),
+          Text(
+            pet["Race"],
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        ],
       ),
     );
   }
