@@ -170,18 +170,7 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: <Widget>[
         favoriteTitleWidget(),
-        Container(
-          margin: EdgeInsets.symmetric(vertical: 20.0),
-          height: 300,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: <Widget>[
-              Text("1"),
-              Text("2"),
-              Text("3"),
-            ],
-          ),
-        ),
+        favoriteListViewWidget(),
       ],
     );
   }
@@ -197,6 +186,21 @@ class _HomePageState extends State<HomePage> {
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
+      ),
+    );
+  }
+
+  Container favoriteListViewWidget() {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 20.0),
+      height: 300,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Text("1"),
+          Text("2"),
+          Text("3"),
+        ],
       ),
     );
   }
