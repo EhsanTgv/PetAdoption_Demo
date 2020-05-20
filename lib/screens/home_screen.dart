@@ -166,6 +166,37 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget favoritePetLayoutWidget() {
+    return Column(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.only(left: 24),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "Your Favorite Pets",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 20.0),
+          height: 300,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Text("1"),
+              Text("2"),
+              Text("3"),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -177,30 +208,7 @@ class _HomePageState extends State<HomePage> {
               titleWidget(),
               tabBarWidget(),
               petListWidget(),
-              Container(
-                margin: EdgeInsets.only(left: 24),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Your Favorite Pets",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 20.0),
-                height: 300,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    Text("1"),
-                    Text("2"),
-                    Text("3"),
-                  ],
-                ),
-              ),
+              favoritePetLayoutWidget()
             ],
           ),
         ),
