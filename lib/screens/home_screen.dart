@@ -166,6 +166,7 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.symmetric(vertical: 20.0),
       height: 300,
       child: ListView(
+        padding: EdgeInsets.only(left: 8),
         scrollDirection: Axis.horizontal,
         children: petList,
       ),
@@ -196,11 +197,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Container favoriteListViewWidget() {
+  Widget favoriteListViewWidget() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0),
       height: 300,
       child: ListView(
+        padding: EdgeInsets.only(left: 8),
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           petListItemWidget(favoritePetMap[0]),
