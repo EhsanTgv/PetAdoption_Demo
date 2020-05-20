@@ -188,7 +188,19 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 20.0),
+                height: 300,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Text("1"),
+                    Text("2"),
+                    Text("3"),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
