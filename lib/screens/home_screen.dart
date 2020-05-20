@@ -17,6 +17,12 @@ class _HomePageState extends State<HomePage> {
     {"Image": "assets/dog_3.png", "Name": "Dannie", "Race": "Bocker"},
   ];
 
+  static var favoritePetMap = <Map<String, String>>[
+    {"Image": "assets/dog_4.png", "Name": "Jordan", "Race": "Bocker"},
+    {"Image": "assets/dog_5.png", "Name": "Dannie", "Race": "Pug Dog"},
+    {"Image": "assets/dog_6.png", "Name": "Charlie", "Race": "Pug Dog"},
+  ];
+
   var tabsList = <Widget>[
     tabItemWidget(tabsArray[0]),
     tabItemWidget(tabsArray[1]),
@@ -197,9 +203,9 @@ class _HomePageState extends State<HomePage> {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          Text("1"),
-          Text("2"),
-          Text("3"),
+          petListItemWidget(favoritePetMap[0]),
+          petListItemWidget(favoritePetMap[1]),
+          petListItemWidget(favoritePetMap[2]),
         ],
       ),
     );
