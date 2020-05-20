@@ -169,18 +169,7 @@ class _HomePageState extends State<HomePage> {
   Widget favoritePetLayoutWidget() {
     return Column(
       children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(left: 24),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Your Favorite Pets",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+        favoriteTitleWidget(),
         Container(
           margin: EdgeInsets.symmetric(vertical: 20.0),
           height: 300,
@@ -194,6 +183,21 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ],
+    );
+  }
+
+  Widget favoriteTitleWidget() {
+    return Container(
+      margin: EdgeInsets.only(left: 24),
+      alignment: Alignment.centerLeft,
+      child: Text(
+        "Your Favorite Pets",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 
