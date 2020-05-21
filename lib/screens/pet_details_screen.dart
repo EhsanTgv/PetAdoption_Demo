@@ -12,13 +12,17 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            ClipRRect(
-              child: Image.asset("assets/dog_cover.png"),
-              borderRadius: BorderRadius.only(bottomRight: Radius.circular(64)),
-            ),
+            coverImageWidget(),
           ],
         ),
       ),
+    );
+  }
+
+  Widget coverImageWidget() {
+    return ClipRRect(
+      child: Image.asset("assets/dog_cover.png"),
+      borderRadius: BorderRadius.only(bottomRight: Radius.circular(64)),
     );
   }
 }
