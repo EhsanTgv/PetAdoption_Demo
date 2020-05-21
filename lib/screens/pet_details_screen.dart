@@ -8,6 +8,13 @@ class PetDetailsScreen extends StatefulWidget {
 class _PetDetailsScreenState extends State<PetDetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Image.asset("assets/dog_cover.png"),
+        ],
+      ),
+    ));
   }
 }
