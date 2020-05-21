@@ -13,6 +13,23 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
         child: Column(
           children: <Widget>[
             coverImageWidget(),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text("Charlie"),
+                      Text("Pug Dog"),
+                    ],
+                  ),
+                ),
+                Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                )
+              ],
+            )
           ],
         ),
       ),
