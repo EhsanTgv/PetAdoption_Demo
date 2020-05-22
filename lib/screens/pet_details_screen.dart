@@ -14,6 +14,29 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
           children: <Widget>[
             coverImageWidget(),
             titleRowWidget(),
+            Container(
+              margin: EdgeInsets.only(top: 32, left: 24, right: 24),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                      child: Text(
+                    "1",
+                    textAlign: TextAlign.center,
+                  )),
+                  Expanded(
+                      child: Text(
+                    "2",
+                    textAlign: TextAlign.center,
+                  )),
+                  Expanded(
+                    child: Text(
+                      "3",
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
