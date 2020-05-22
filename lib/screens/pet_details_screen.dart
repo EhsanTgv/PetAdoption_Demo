@@ -24,10 +24,21 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                         Text(
                           "sex",
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
+                        SizedBox(height: 8),
                         Text(
                           "Male",
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
@@ -38,10 +49,21 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                         Text(
                           "color",
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
+                        SizedBox(height: 8),
                         Text(
                           "Black",
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
@@ -52,10 +74,21 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                         Text(
                           "age",
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
+                        SizedBox(height: 8),
                         Text(
                           "2 Yr",
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
