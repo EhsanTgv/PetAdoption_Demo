@@ -70,86 +70,42 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
 
   Widget detailsRowWidget() {
     return Container(
-            margin: EdgeInsets.only(top: 32, left: 24, right: 24),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        "sex",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        "Male",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        "color",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        "Black",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        "age",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        "2 Yr",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+      margin: EdgeInsets.only(top: 32, left: 24, right: 24),
+      child: Row(
+        children: <Widget>[
+          itemDetailsRowWidget("sex", "Male"),
+          itemDetailsRowWidget("color", "Black"),
+          itemDetailsRowWidget("age", "2 Yr"),
+        ],
+      ),
+    );
+  }
+
+  Widget itemDetailsRowWidget(String label, String value) {
+    return Expanded(
+      child: Column(
+        children: <Widget>[
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
             ),
-          );
+          ),
+          SizedBox(height: 8),
+          Text(
+            value,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
