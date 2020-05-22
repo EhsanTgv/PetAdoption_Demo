@@ -19,19 +19,45 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                      child: Text(
-                    "1",
-                    textAlign: TextAlign.center,
-                  )),
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          "sex",
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "Male",
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
                   Expanded(
-                      child: Text(
-                    "2",
-                    textAlign: TextAlign.center,
-                  )),
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          "color",
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "Black",
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
                   Expanded(
-                    child: Text(
-                      "3",
-                      textAlign: TextAlign.center,
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          "age",
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "2 Yr",
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                     ),
                   ),
                 ],
