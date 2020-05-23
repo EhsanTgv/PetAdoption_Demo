@@ -19,7 +19,10 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
               margin: EdgeInsets.only(top: 32, right: 24, left: 24),
               child: Row(
                 children: <Widget>[
-                  Image.asset("assets/pet_owner.png"),
+                  ClipRRect(
+                    child: Image.asset("assets/pet_owner.png"),
+                    borderRadius: BorderRadius.all(Radius.circular(128)),
+                  ),
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(left: 8),
