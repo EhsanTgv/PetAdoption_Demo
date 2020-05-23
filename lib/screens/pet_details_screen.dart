@@ -20,13 +20,36 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
               child: Row(
                 children: <Widget>[
                   Image.asset("assets/pet_owner.png"),
-                  Container(
-                    margin: EdgeInsets.only(left: 8),
-                    child: Column(
-                      children: <Widget>[
-                        Text("name"),
-                        Text("description"),
-                      ],
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(left: 8),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Shawn Corrigan",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Charlie is a smart and happy dog and needs at least one day out of apartment.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
