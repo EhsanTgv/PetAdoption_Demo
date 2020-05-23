@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:petadoption/custom_view/custom_tab_indicator.dart';
+import 'package:petadoption/screens/pet_details_screen.dart';
 
 class HomePage extends StatefulWidget {
   HomePage();
@@ -29,12 +30,6 @@ class _HomePageState extends State<HomePage> {
     tabItemWidget(tabsArray[2]),
     tabItemWidget(tabsArray[3]),
     tabItemWidget(tabsArray[4]),
-  ];
-
-  var petList = <Widget>[
-    petListItemWidget(petMap[0]),
-    petListItemWidget(petMap[1]),
-    petListItemWidget(petMap[2]),
   ];
 
   Widget appBarWidget() {
@@ -124,39 +119,45 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  static Widget petListItemWidget(Map<String, String> pet) {
+  Widget petListItemWidget(Map<String, String> pet) {
     return Container(
       margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ClipRRect(
-            child: Image.asset(pet["Image"]),
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(32.0),
-              topLeft: Radius.circular(32.0),
-              bottomRight: Radius.circular(32.0),
+      child: InkWell(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => PetDetailsScreen()));
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            ClipRRect(
+              child: Image.asset(pet["Image"]),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(32.0),
+                topLeft: Radius.circular(32.0),
+                bottomRight: Radius.circular(32.0),
+              ),
             ),
-          ),
-          SizedBox(height: 12),
-          Text(
-            pet["Name"],
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
+            SizedBox(height: 12),
+            Text(
+              pet["Name"],
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          SizedBox(height: 6),
-          Text(
-            pet["Race"],
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 12,
-              fontWeight: FontWeight.normal,
+            SizedBox(height: 6),
+            Text(
+              pet["Race"],
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.normal,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -168,7 +169,11 @@ class _HomePageState extends State<HomePage> {
       child: ListView(
         padding: EdgeInsets.only(left: 8),
         scrollDirection: Axis.horizontal,
-        children: petList,
+        children: <Widget>[
+          petListItemWidget(petMap[0]),
+          petListItemWidget(petMap[1]),
+          petListItemWidget(petMap[2]),
+        ],
       ),
     );
   }
