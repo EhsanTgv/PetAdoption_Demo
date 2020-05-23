@@ -14,7 +14,18 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
           children: <Widget>[
             coverImageWidget(),
             titleRowWidget(),
-            detailsRowWidget()
+            detailsRowWidget(),
+            Row(
+              children: <Widget>[
+                Image.asset("assets/pet_owner.png"),
+                Column(
+                  children: <Widget>[
+                    Text("name"),
+                    Text("description"),
+                  ],
+                )
+              ],
+            )
           ],
         ),
       ),
