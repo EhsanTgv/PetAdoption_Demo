@@ -15,49 +15,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             coverImageWidget(),
             titleRowWidget(),
             detailsRowWidget(),
-            Container(
-              margin: EdgeInsets.only(top: 32, right: 24, left: 24),
-              child: Row(
-                children: <Widget>[
-                  ClipRRect(
-                    child: Image.asset("assets/pet_owner.png"),
-                    borderRadius: BorderRadius.all(Radius.circular(128)),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(left: 8),
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Shawn Corrigan",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Charlie is a smart and happy dog and needs at least one day out of apartment.",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
+            ownerDetailsRowWidget()
           ],
         ),
       ),
@@ -145,6 +103,52 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
               color: Colors.black,
               fontSize: 14,
               fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget ownerDetailsRowWidget() {
+    return Container(
+      margin: EdgeInsets.only(top: 32, right: 24, left: 24),
+      child: Row(
+        children: <Widget>[
+          ClipRRect(
+            child: Image.asset("assets/pet_owner.png"),
+            borderRadius: BorderRadius.all(Radius.circular(128)),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(left: 8),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Shawn Corrigan",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Charlie is a smart and happy dog and needs at least one day out of apartment.",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
