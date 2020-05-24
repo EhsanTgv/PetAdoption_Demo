@@ -16,12 +16,30 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             titleRowWidget(),
             detailsRowWidget(),
             ownerDetailsRowWidget(),
-            Row(
-              children: <Widget>[
-                Text("Call"),
-                Text("Chat"),
-                Text("Adopt"),
-              ],
+            Container(
+              margin: EdgeInsets.only(top: 32, left: 24, right: 24),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text("Call"),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text("Chat"),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text("Adopt"),
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 32)
           ],
