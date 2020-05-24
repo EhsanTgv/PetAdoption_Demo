@@ -16,6 +16,13 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             titleRowWidget(),
             detailsRowWidget(),
             ownerDetailsRowWidget(),
+            Row(
+              children: <Widget>[
+                Text("Call"),
+                Text("Chat"),
+                Text("Adopt"),
+              ],
+            ),
             SizedBox(height: 32)
           ],
         ),
