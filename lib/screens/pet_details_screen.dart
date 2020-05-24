@@ -23,18 +23,44 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          topRight: Radius.circular(8),
+                          bottomRight: Radius.circular(8),
+                        ),
+                      ),
                       child: Text("Call"),
                     ),
                   ),
+                  SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          topRight: Radius.circular(8),
+                          bottomRight: Radius.circular(8),
+                        ),
+                      ),
                       child: Text("Chat"),
                     ),
                   ),
+                  SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          topRight: Radius.circular(8),
+                          bottomRight: Radius.circular(8),
+                        ),
+                      ),
                       child: Text("Adopt"),
                     ),
                   ),
