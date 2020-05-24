@@ -22,7 +22,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                 children: <Widget>[
                   Expanded(
                     child: Container(
-                      alignment: Alignment.center,
+                      padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.only(
@@ -31,13 +31,22 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                           bottomRight: Radius.circular(8),
                         ),
                       ),
-                      child: Text("Call"),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                              alignment: Alignment.centerRight,
+                              child: Icon(Icons.call)),
+                          Container(
+                              alignment: Alignment.centerLeft,
+                              child: Text("Call")),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 12),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.center,
+                      padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.only(
@@ -46,13 +55,22 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                           bottomRight: Radius.circular(8),
                         ),
                       ),
-                      child: Text("Chat"),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                              alignment: Alignment.centerRight,
+                              child: Icon(Icons.chat_bubble_outline)),
+                          Container(
+                              alignment: Alignment.centerLeft,
+                              child: Text("Chat")),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 12),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.center,
+                      padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.only(
@@ -61,7 +79,16 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                           bottomRight: Radius.circular(8),
                         ),
                       ),
-                      child: Text("Adopt"),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                              alignment: Alignment.centerRight,
+                              child: Icon(Icons.pets)),
+                          Container(
+                              alignment: Alignment.centerLeft,
+                              child: Text("Adopt")),
+                        ],
+                      ),
                     ),
                   ),
                 ],
