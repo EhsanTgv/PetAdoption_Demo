@@ -15,7 +15,8 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             coverImageWidget(),
             titleRowWidget(),
             detailsRowWidget(),
-            ownerDetailsRowWidget()
+            ownerDetailsRowWidget(),
+            SizedBox(height: 32)
           ],
         ),
       ),
