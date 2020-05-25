@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petadoption/config/colors.dart';
 
 class PetDetailsScreen extends StatefulWidget {
   @override
@@ -54,7 +55,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                 Text(
                   "Pug Dog",
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: textGrey,
                     fontSize: 16,
                     fontWeight: FontWeight.normal,
                   ),
@@ -64,7 +65,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
           ),
           Icon(
             Icons.favorite,
-            color: Colors.red,
+            color: accentRed,
           )
         ],
       ),
@@ -92,7 +93,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             label,
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.grey,
+              color: textGrey,
               fontSize: 12,
               fontWeight: FontWeight.normal,
             ),
@@ -102,7 +103,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             value,
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.black,
+              color: blackColor,
               fontSize: 14,
               fontWeight: FontWeight.bold,
             ),
@@ -132,7 +133,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                       "Shawn Corrigan",
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: textGrey,
                         fontSize: 16,
                       ),
                     ),
@@ -144,7 +145,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
                       "Charlie is a smart and happy dog and needs at least one day out of apartment.",
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: Colors.black,
+                        color: blackColor,
                         fontSize: 14,
                       ),
                     ),
@@ -167,7 +168,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             child: Container(
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.grey,
+                color: backgroundGrey,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(8),
@@ -190,7 +191,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             child: Container(
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.grey,
+                color: backgroundGrey,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(8),
@@ -213,7 +214,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             child: Container(
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: accentRed,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(8),
