@@ -79,13 +79,14 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
         children: <Widget>[
           itemDetailsRowWidget("sex", "Male"),
           itemDetailsRowWidget("color", "Black"),
-          itemDetailsRowWidget("age", "2 Yr"),
+          itemDetailsRowWidget("age", "2 Yr", unimportantValue: true),
         ],
       ),
     );
   }
 
-  Widget itemDetailsRowWidget(String label, String value) {
+  Widget itemDetailsRowWidget(String label, String value,
+      {bool unimportantValue = false}) {
     return Expanded(
       child: Column(
         children: <Widget>[
@@ -103,7 +104,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             value,
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: blackColor,
+              color: unimportantValue ? textGrey : blackColor,
               fontSize: 14,
               fontWeight: FontWeight.bold,
             ),
