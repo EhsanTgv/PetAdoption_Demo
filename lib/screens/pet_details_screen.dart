@@ -165,17 +165,19 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       margin: EdgeInsets.only(top: 32, left: 24, right: 24),
       child: Row(
         children: <Widget>[
-          buttonsRowItems("Call", Icon(Icons.call)),
+          buttonsRowItems("Call", Icons.call),
           SizedBox(width: 12),
-          buttonsRowItems("Chat", Icon(Icons.chat_bubble_outline)),
+          buttonsRowItems("Chat", Icons.chat_bubble_outline),
           SizedBox(width: 12),
-          buttonsRowItems("Adopt", Icon(Icons.pets), callToAction: true),
+          buttonsRowItems("Adopt", Icons.pets, callToAction: true),
         ],
       ),
     );
   }
 
-  Widget buttonsRowItems(String text, Icon icon, {bool callToAction = false}) {
+  Widget buttonsRowItems(String text, IconData icon,
+      {bool callToAction = false}) {
+    Color textColor = callToAction ? whiteColor : textGrey;
     return Expanded(
       child: Container(
         padding: EdgeInsets.all(8),
@@ -189,8 +191,12 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
         ),
         child: Column(
           children: <Widget>[
-            Container(alignment: Alignment.centerRight, child: icon),
-            Container(alignment: Alignment.centerLeft, child: Text(text)),
+            Container(
+                alignment: Alignment.centerRight,
+                child: Icon(icon, color: textColor)),
+            Container(
+                alignment: Alignment.centerLeft,
+                child: Text(text, style: TextStyle(color: textColor))),
           ],
         ),
       ),
