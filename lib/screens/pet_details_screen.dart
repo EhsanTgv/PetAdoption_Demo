@@ -164,75 +164,34 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       margin: EdgeInsets.only(top: 32, left: 24, right: 24),
       child: Row(
         children: <Widget>[
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: backgroundGrey,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(8),
-                  topRight: Radius.circular(8),
-                  bottomRight: Radius.circular(8),
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.centerRight,
-                      child: Icon(Icons.call)),
-                  Container(
-                      alignment: Alignment.centerLeft, child: Text("Call")),
-                ],
-              ),
-            ),
-          ),
+          buttonsRowItems("Call", Icon(Icons.call)),
           SizedBox(width: 12),
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: backgroundGrey,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(8),
-                  topRight: Radius.circular(8),
-                  bottomRight: Radius.circular(8),
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.centerRight,
-                      child: Icon(Icons.chat_bubble_outline)),
-                  Container(
-                      alignment: Alignment.centerLeft, child: Text("Chat")),
-                ],
-              ),
-            ),
-          ),
+          buttonsRowItems("Chat", Icon(Icons.chat_bubble_outline)),
           SizedBox(width: 12),
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: accentRed,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(8),
-                  topRight: Radius.circular(8),
-                  bottomRight: Radius.circular(8),
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      alignment: Alignment.centerRight,
-                      child: Icon(Icons.pets)),
-                  Container(
-                      alignment: Alignment.centerLeft, child: Text("Adopt")),
-                ],
-              ),
-            ),
-          ),
+          buttonsRowItems("Adopt", Icon(Icons.pets), callToAction: true),
         ],
+      ),
+    );
+  }
+
+  Widget buttonsRowItems(String text, Icon icon, {bool callToAction = false}) {
+    return Expanded(
+      child: Container(
+        padding: EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: callToAction ? accentRed : backgroundGrey,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(8),
+            topRight: Radius.circular(8),
+            bottomRight: Radius.circular(8),
+          ),
+        ),
+        child: Column(
+          children: <Widget>[
+            Container(alignment: Alignment.centerRight, child: icon),
+            Container(alignment: Alignment.centerLeft, child: Text(text)),
+          ],
+        ),
       ),
     );
   }
