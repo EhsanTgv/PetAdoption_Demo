@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petadoption/config/colors.dart';
 import 'package:petadoption/custom_view/custom_tab_indicator.dart';
 import 'package:petadoption/screens/pet_details_screen.dart';
 
@@ -70,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             "Your Location",
             style: TextStyle(
               fontSize: 14,
-              color: Colors.grey,
+              color: textGrey,
               fontWeight: FontWeight.normal,
             ),
           ),
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
             "NewYork, USA",
             style: TextStyle(
               fontSize: 24,
-              color: Colors.black,
+              color: blackColor,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -93,19 +94,18 @@ class _HomePageState extends State<HomePage> {
       length: tabsList.length,
       child: TabBar(
         isScrollable: true,
-        unselectedLabelColor: Colors.grey,
+        unselectedLabelColor: textGrey,
         unselectedLabelStyle: TextStyle(
           fontWeight: FontWeight.normal,
           fontSize: 12,
-          color: Colors.black,
+          color: blackColor,
         ),
-        labelColor: Colors.black,
+        labelColor: blackColor,
         labelStyle: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 14,
         ),
-        // indicatorColor: Colors.black,
-        indicator: CircleTabIndicator(color: Colors.black, radius: 3),
+        indicator: CircleTabIndicator(color: blackColor, radius: 3),
         tabs: tabsList,
       ),
     );
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               pet["Name"],
               style: TextStyle(
-                color: Colors.black,
+                color: blackColor,
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               pet["Race"],
               style: TextStyle(
-                color: Colors.grey,
+                color: textGrey,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
               ),
@@ -194,7 +194,7 @@ class _HomePageState extends State<HomePage> {
       child: Text(
         "Your Favorite Pets",
         style: TextStyle(
-          color: Colors.black,
+          color: blackColor,
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
