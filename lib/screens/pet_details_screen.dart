@@ -166,11 +166,11 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       margin: EdgeInsets.only(top: 32, left: 24, right: 24),
       child: Row(
         children: <Widget>[
-          buttonsRowItems("Call", Icons.call, null),
+          buttonsRowItems("Call", Icons.call, callAction),
           SizedBox(width: 12),
-          buttonsRowItems("Chat", Icons.chat_bubble_outline, null),
+          buttonsRowItems("Chat", Icons.chat_bubble_outline,null),
           SizedBox(width: 12),
-          buttonsRowItems("Adopt", Icons.pets, null, callToAction: true),
+          buttonsRowItems("Adopt", Icons.pets,null, callToAction: true),
         ],
       ),
     );
@@ -205,5 +205,9 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
         ),
       ),
     );
+  }
+
+  callAction() {
+    launch("tel://21213123123");
   }
 }
