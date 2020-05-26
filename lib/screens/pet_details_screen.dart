@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:petadoption/config/colors.dart';
+import 'package:petadoption/custom_view/action_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PetDetailsScreen extends StatefulWidget {
@@ -166,43 +167,12 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       margin: EdgeInsets.only(top: 32, left: 24, right: 24),
       child: Row(
         children: <Widget>[
-          buttonsRowItems("Call", Icons.call, callAction),
+          ActionButton("Call", Icons.call, callAction),
           SizedBox(width: 12),
-          buttonsRowItems("Chat", Icons.chat_bubble_outline, smsAction),
+          ActionButton("Chat", Icons.chat_bubble_outline, smsAction),
           SizedBox(width: 12),
-          buttonsRowItems("Adopt", Icons.pets, null, callToAction: true),
+          ActionButton("Adopt", Icons.pets, null, callToAction: true),
         ],
-      ),
-    );
-  }
-
-  Widget buttonsRowItems(String text, IconData icon, Function action,
-      {bool callToAction = false}) {
-    Color textColor = callToAction ? whiteColor : textGrey;
-    return Expanded(
-      child: InkWell(
-        onTap: action,
-        child: Container(
-          padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: callToAction ? accentRed : backgroundGrey,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(8),
-              topRight: Radius.circular(8),
-              bottomRight: Radius.circular(8),
-            ),
-          ),
-          child: Column(
-            children: <Widget>[
-              Container(
-                  alignment: Alignment.centerRight,
-                  child: Icon(icon, color: textColor)),
-              Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(text, style: TextStyle(color: textColor))),
-            ],
-          ),
-        ),
       ),
     );
   }
