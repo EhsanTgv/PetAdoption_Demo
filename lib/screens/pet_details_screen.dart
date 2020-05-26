@@ -168,9 +168,9 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
         children: <Widget>[
           buttonsRowItems("Call", Icons.call, callAction),
           SizedBox(width: 12),
-          buttonsRowItems("Chat", Icons.chat_bubble_outline,null),
+          buttonsRowItems("Chat", Icons.chat_bubble_outline, smsAction),
           SizedBox(width: 12),
-          buttonsRowItems("Adopt", Icons.pets,null, callToAction: true),
+          buttonsRowItems("Adopt", Icons.pets, null, callToAction: true),
         ],
       ),
     );
@@ -209,5 +209,9 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
 
   callAction() {
     launch("tel://21213123123");
+  }
+
+  smsAction() {
+    launch("sms:5550101234");
   }
 }
