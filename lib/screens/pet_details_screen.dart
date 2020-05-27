@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petadoption/config/colors.dart';
 import 'package:petadoption/custom_view/buttons_row.dart';
+import 'package:petadoption/custom_view/owner_details_card.dart';
 
 class PetDetailsScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
             coverImageWidget(),
             titleRowWidget(),
             detailsRowWidget(),
-            ownerDetailsRowWidget(),
+            OwnerDetailsCard(),
             ButtonsRow(),
             SizedBox(height: 32)
           ],
@@ -108,52 +109,6 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
               color: unimportantValue ? textGrey : blackColor,
               fontSize: 14,
               fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget ownerDetailsRowWidget() {
-    return Container(
-      margin: EdgeInsets.only(top: 32, right: 24, left: 24),
-      child: Row(
-        children: <Widget>[
-          ClipRRect(
-            child: Image.asset("assets/pet_owner.png"),
-            borderRadius: BorderRadius.all(Radius.circular(128)),
-          ),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(left: 8),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Shawn Corrigan",
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: textGrey,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Charlie is a smart and happy dog and needs at least one day out of apartment.",
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: blackColor,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ),
           ),
         ],
