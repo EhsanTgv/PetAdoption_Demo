@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:petadoption/custom_view/action_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ButtonsRow extends StatelessWidget{
-  ButtonsRow();
-
-@override
+class ButtonsRow extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 32, left: 24, right: 24),
